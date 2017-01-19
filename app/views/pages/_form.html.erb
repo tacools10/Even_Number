@@ -1,6 +1,6 @@
 <%= form_for @number, url: {action: "create"} do |f| %>
-  <%= label_tag(:value, "Please input your number") %>
-  <%= f.number_field :value %>
+  <%= label_tag(:value, "Please input your number. Should be a positive integer") %>
+  <%= f.text_field :value %>
   <%= f.submit "Submit" %>
 <% end %>
 
