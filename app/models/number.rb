@@ -1,4 +1,4 @@
-class IntegerInput
+class Number
   include ActiveModel::Model
 
   attr_accessor :value
