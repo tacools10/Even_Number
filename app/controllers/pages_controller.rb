@@ -8,7 +8,13 @@ class PagesController < ApplicationController
   end
 
   def create
-    @number = Number.create(number_params)
+    @number = Number.new(number_params)
+    if @number.valid?
+      render(:partial => 'evens', locals: {number: @number})
+    else
+      render(:partial => 'error_message')
+    end
+
   end
 
   private
